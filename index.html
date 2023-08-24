@@ -24,7 +24,7 @@
             <img src="images/logo.png" alt="" width="124px" />
           </div>
           <nav>
-            <ul>
+            <ul id="MenuItems">
               <li><a href="">Home </a></li>
               <li><a href=""> Products</a></li>
               <li><a href="">About </a></li>
@@ -34,6 +34,7 @@
           </nav>
 
           <img src="images/cart.png" alt="cart" width="30px" height="30px" />
+          <img src="images/menu.png" alt="menu" class="menu-icon" onclick="menutoggle()">
         </div>
 
         <div class="row">
@@ -397,7 +398,28 @@
         </div>
       </div>
     </div>
+
+
+    <!-- js for toggle menu -->
     
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+      console.log(MenuItems)
+      MenuItems.style.maxHieght = "0px";
+
+      function menutoggle(){
+      
+        if( MenuItems.style.maxHieght == "0px"){
+          console.log("its run")
+          MenuItems.style.maxHieght = "200px"
+          
+        }else {
+          console.log("its run2")
+          MenuItems.style.maxHieght = "0px"
+
+        }
+      }
+    </script>
   </body>
 
 </html>
